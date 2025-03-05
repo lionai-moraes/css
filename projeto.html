@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias e Downloads de Jogos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Press Start 2P', Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+            padding: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 14px;
+            color: #fff;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+        .section {
+            display: none;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffcc;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #00ffcc;
+        }
+        .news-article {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+        .news-article a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        .news-article a:hover {
+            text-decoration: underline;
+        }
+        .download-links a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px;
+            background: #00ffcc;
+            color: #111;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .download-links a:hover {
+            background: #111;
+            color: #00ffcc;
+            box-shadow: 0 0 15px #00ffcc;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            color: #666;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>Notícias & Downloads de Jogos</header>
+
+    <nav>
+        <a href="#" onclick="showNews()">Notícias</a>
+        <a href="#" onclick="showDownloads()">Downloads</a>
+    </nav>
+
+    <div id="newsSection" class="section">
+        <h2>Últimas Notícias de Jogos</h2>
+        <div id="newsContainer">
+            <div class="news-article">
+                <strong>🔗 <a href="https://www.eurogamer.net/pt" target="_blank">Novo trailer de GTA 6 revela detalhes incríveis!</a></strong>
+                <p>Publicado em: 04/03/2025</p>
+            </div>
+            <div class="news-article">
+                <strong>🔗 <a href="https://www.eurogamer.net/pt" target="_blank">Steam inicia promoção com até 90% de desconto</a></strong>
+                <p>Publicado em: 03/03/2025</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="downloadSection" class="section">
+        <h2>Baixe seus Jogos Favoritos</h2>
+        <div class="download-links">
+            <a href="https://store.steampowered.com" target="_blank">Baixar na Steam</a>
+            <a href="https://play.google.com/store/games" target="_blank">Baixar na Play Store</a>
+            <a href="https://www.xbox.com/pt-BR/games" target="_blank">Baixar no Xbox</a>
+            <a href="https://store.playstation.com" target="_blank">Baixar na PlayStation Store</a>
+        </div>
+    </div>
+
+    <footer>© 2025 - Notícias e Downloads de Jogos - Todos os direitos reservados</footer>
+
+    <script>
+        function hideAllSections() {
+            document.getElementById("newsSection").style.display = "none";
+            document.getElementById("downloadSection").style.display = "none";
+        }
+
+        function showNews() {
+            hideAllSections();
+            document.getElementById("newsSection").style.display = "block";
+        }
+
+        function showDownloads() {
+            hideAllSections();
+            document.getElementById("downloadSection").style.display = "block";
+        }
+
+        // Exibir notícias por padrão
+        showNews();
+    </script>
+</body>
+</html>
